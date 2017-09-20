@@ -1,6 +1,8 @@
 # livecode-projectile
 
-A simple implementation of an Euler integrator for projectile motion. Next week, we will add drag and stopping conditions.
+A simple implementation of an Euler integrator for projectile motion. This program was written (mostly) live, in lecture for SOFE-2850U in Fall 2017.
+
+Next week, we will add drag and stopping conditions. The drag will make the code more interesting, while the stopping conditions will introduce us to lambdas and templates.
 
 ## Compilation
 
