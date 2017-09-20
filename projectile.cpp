@@ -28,6 +28,6 @@ void n_steps(unsigned n, TState state0) {
 }
 
 int main() {
-  n_steps(9000, TState{0., {0, 0.1}, {5, 5}});
+  n_steps(1200, TState{0., {0, 0.1}, {5, 5}});
   return 0;
 }
