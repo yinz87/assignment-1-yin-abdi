@@ -2,20 +2,36 @@
 
 #include <cstdio>
 
+template <typename T>
 struct VecR2 {
-  double x{0};
-  double y{0};
+  T x{0};
+  T y{0};
 };
 
-auto operator+(VecR2 a, VecR2 b) { return VecR2{a.x + b.x, a.y + b.y}; }
-auto operator*(VecR2 a, double c) { return VecR2{c * a.x, c * a.y}; }
-auto operator*(double c, VecR2 a) { return a * c; }
-auto operator/(VecR2 a, double c) { return VecR2{a.x / c, a.y / c}; }
+template <typename T>
+auto operator+(VecR2<T> a, VecR2<T> b) {
+  return VecR2<T>{a.x + b.x, a.y + b.y};
+}
+
+template <typename T>
+auto operator*(VecR2<T> a, T c) {
+  return VecR2<T>{c * a.x, c * a.y};
+}
+
+template <typename T>
+auto operator*(T c, VecR2<T> a) {
+  return a * c;
+}
+
+template <typename T>
+auto operator/(VecR2<T> a, T c) {
+  return VecR2<T>{a.x / c, a.y / c};
+}
 
 struct TState {
   double t{0};
-  VecR2 position{0, 0};
-  VecR2 velocity{0, 0};
+  VecR2<double> position{0, 0};
+  VecR2<double> velocity{0, 0};
 };
 
 void print_tstate(TState s) {

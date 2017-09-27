@@ -4,9 +4,9 @@ const double m = 1;
 const double g = 9.8066;
 const double dt = 0.001;
 
-auto force(TState s) { return VecR2{0, -m * g}; }
+auto force(TState s) { return VecR2<double>{0, -m * g}; }
 
-auto euler_step(TState s, VecR2 accel) {
+auto euler_step(TState s, VecR2<double> accel) {
   TState next;
   next.t = s.t + dt;
   next.position = s.position + (s.velocity * dt);
