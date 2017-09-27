@@ -1,4 +1,6 @@
-# livecode-projectile
+# `livecode-projectile`
+---
+![](https://travis-ci.org/timtro/livecode-projectile.svg?branch=master)
 
 A simple implementation of an Euler integrator for projectile motion. This program was written (mostly) live, in lecture for SOFE-2850U in Fall 2017.
 
@@ -8,7 +10,11 @@ Next week, we will add drag and stopping conditions. The drag will make the outp
 
 Compile with
 ```bash
-clang++-6.0 -std=c++17 -o projectile projectile.cpp
+clang++ -std=c++14 -o projectile projectile.cpp
+```
+or
+```bash
+g++ -std=c++14 -o projectile projectile.cpp
 ```
 and run as
 ```bash
