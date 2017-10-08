@@ -1,18 +1,18 @@
 #include "projectile.hpp"
 
-const double k = 0.5;
-const double q = 1;
-const double m = 1;
-const double E0 = 1;
+const double dt = 0.001;
 
-auto force(TState s) { return VecR3<double>{0, -m * g}; }
+auto acceleration(TState s) { return VecR3<double>{0,  ,0}; }
 
-auto euler_step(TState s, VecR3<double> accel) {
+auto Verlet_step(TState s, VecR3<double> accel) {
   TState next;
   next.t = s.t + dt;
-  next.position = s.position + (s.velocity * dt);
-  next.velocity = s.velocity + (accel * dt);
+  next.position = s.position + (s.velocity * dt) + 1/2 * accel*pow(dt,2);
+  //verlet equation for x
+  next.velocity = s.velocity + ((accel + accel + accel*dt)/2 * dt);
+  //verlet equaiton for v
   return next;
+
 }
 
 void n_steps(unsigned n, TState state0) {
