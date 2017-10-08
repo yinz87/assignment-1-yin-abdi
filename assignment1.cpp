@@ -1,6 +1,6 @@
 #include "assignment1.hpp"
 
-const double dt = 0.001;
+const double dt = 0.01;
 
 auto force(TState s) { return VecR3<double>{e/sqrt(2)*cos(k*s.position.z-w*s.t), e/sqrt(2)*sin(k*s.position.z-w*s.t) ,0}; }
 //force = qE = E as q = 1, E is the postion at VerR3 space with given equation

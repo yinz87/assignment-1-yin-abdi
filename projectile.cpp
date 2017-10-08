@@ -29,5 +29,6 @@ void n_steps(unsigned n, TState state0) {
 
 int main() {
   n_steps(1200, TState{0., {0, 0.1}, {5, 5}});
+  system("gnuplot -p")
   return 0;
 }

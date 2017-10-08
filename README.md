@@ -10,15 +10,15 @@ Next week, we will add drag and stopping conditions. The drag will make the outp
 
 Compile with
 ```bash
-clang++ -std=c++14 -o projectile projectile.cpp
+clang++ -std=c++14 -o assignment1 assignment1.cpp
 ```
 or
 ```bash
-g++ -std=c++14 -o projectile projectile.cpp
+g++ -std=c++14 -o assignment1 assignment1.cpp
 ```
 and run as
 ```bash
-./projectile
+./assignment1
 ```
 and watch your terminal fill with numbers.
 
@@ -26,7 +26,7 @@ and watch your terminal fill with numbers.
 
 The output will be six columns of numbers with the following order:
 ```
-time [s], x-position [m], y-position [m], x-speed [m/s], y-speed [m/s]
+time [s], x-position [m], y-position [m], z-positon [m] x-speed [m/s], y-speed [m/s], z-speed [m/s]
 ```
 Plot the, you get the familiar parabolic trajectory, which will depend on your constants:  
-![](example.jpg)
+![](plot.PNG)
